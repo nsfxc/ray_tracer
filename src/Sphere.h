@@ -5,6 +5,7 @@
 #include "Vector3D.h"
 #include "Color.h"
 
+
 class Sphere
 {
     public:
@@ -16,6 +17,7 @@ class Sphere
         Vector3D origin() const;
         double radius() const;
         Color color() const;
+        void display();
 
     private:
         double r;       //radius
