@@ -1,3 +1,4 @@
+#include <cmath>
 #include "Vector3D.h"
 
 //constructors
@@ -69,7 +70,7 @@ const Vector3D Vector3D::EX = Vector3D(1, 0, 0);
 const Vector3D Vector3D::EY = Vector3D(0, 1, 0);
 const Vector3D Vector3D::EZ = Vector3D(0, 0, 1);
 
-//overload operator + - *
+//overload operator + - * /
 Vector3D operator+(const Vector3D& lv, const Vector3D& rv)
 {
     return Vector3D(lv.get_x()+rv.get_x(),
@@ -86,12 +87,29 @@ Vector3D operator*(const double &d, const Vector3D &v)
 {
     return Vector3D(d*v.get_x(), d*v.get_y(), d*v.get_z());
 }
+Vector3D operator/(const Vector3D &v, const double &d)
+{
+    return Vector3D(v.get_x()/d, v.get_y()/d, v.get_z()/d);
+}
 double operator*( const Vector3D &v1, const Vector3D &v2)
 {
     return(v1.get_x()*v2.get_x()+
            v1.get_y()*v2.get_y()+
            v1.get_z()*v2.get_z());
 }
+
+//norm normalize
+double norm(const Vector3D &v)
+{
+    return sqrt(v.get_x()*v.get_x()+
+                v.get_y()*v.get_y()+
+                v.get_z()*v.get_z());
+}
+Vector3D normalize(const Vector3D &v)
+{
+    return v/norm(v);
+}
+
 //overload operator == < to overload < for sphere
 bool operator==(const Vector3D& lv, const Vector3D& rv)
 {

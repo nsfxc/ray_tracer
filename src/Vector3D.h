@@ -38,11 +38,17 @@ private:
     double x,y,z;
 };
 
-//overload operator + - *
+//overload operator + - * /
 Vector3D operator+(const Vector3D& lv, const Vector3D& rv);
 Vector3D operator-(const Vector3D& lv, const Vector3D& rv);
-Vector3D operator*(const double &d, const Vector3D &v);     //Scalar multiplication
-double operator*( const Vector3D &v1, const Vector3D &v2);  //Scalar product
+Vector3D operator*(const double &d, const Vector3D &v);     //scalar multiplication
+Vector3D operator/(const Vector3D &v, const double &d);     //scalar division
+double operator*( const Vector3D &v1, const Vector3D &v2);  //scalar product
+
+//norm normalize
+double norm(const Vector3D &v);
+Vector3D normalize(const Vector3D &v);
+
 //overload operator == < to overload < for sphere
 bool operator==(const Vector3D& lv, const Vector3D& rv);
 bool operator<(const Vector3D& lv, const Vector3D& rv);

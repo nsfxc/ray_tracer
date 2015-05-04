@@ -1,5 +1,6 @@
 #include <utility>
 #include <iostream>
+#include <iomanip>
 #include <cassert>
 #include "ray_tracer.h"
 #include "Ray.h"
@@ -21,12 +22,21 @@ void display(const Sphere &s)
 
 int main()
 {
+    //test color
+    Color clr = 0xff4280;
+    cout<<hex
+        <<(int)color_red(clr)<<" "
+        <<(int)color_green(clr)<<" "
+        <<(int)color_blue(clr)<<dec<<endl;
     //test of Vector3D
     Vector3D u, v(2,3,4.5), w;
     w.copy(v);
     v*=2;
-    u.set(1,2,3);
+    u.set(3,4,0);
     display(u);
+    cout<<norm(u)<<endl;
+    display(normalize(u));
+    cout<<norm(normalize(u))<<endl;
     display(v);
     display(u+2*v);
     cout<<u*v<<endl;
