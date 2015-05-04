@@ -3,7 +3,7 @@
 #include "Vector3D.h"
 
 //constructor
-Camera::Camera(Vector3D e, Vector3D t, Vector3D u, size_t w, size_t h)
+Camera::Camera(Vector3D e, Vector3D t, Vector3D u, double w, double h)
 {
     this->e = e;
     this->t = t;
