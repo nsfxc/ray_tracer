@@ -1,5 +1,4 @@
 #include "Vector3D.h"
-#include <math.h>;
 
 //constructors
 Vector3D::Vector3D()
@@ -30,18 +29,18 @@ double Vector3D::get_z() const
 }
 
 //set coordinate x y z
-void Vector3D::set_x(double x)
-{
-    this->x = x;
-}
-void Vector3D::set_y(double y)
-{
-    this->y = y;
-}
-void Vector3D::set_z(double z)
-{
-    this->z = z;
-}
+//void Vector3D::set_x(double x)
+//{
+//    this->x = x;
+//}
+//void Vector3D::set_y(double y)
+//{
+//    this->y = y;
+//}
+//void Vector3D::set_z(double z)
+//{
+//    this->z = z;
+//}
 void Vector3D::set(double x,double y,double z)
 {
     this->x = x;
@@ -61,14 +60,6 @@ void Vector3D::copy(const Vector3D& v)
 void Vector3D::operator*=(double l)
 {
     set(x*l, y*l, z*l);
-}
-
-double Vector3D::length(){
-	return sqrt(x * x + y * y + z * z);
-}
-
-double Vector3D::distance(Vector3D v){
-	return sqrt((x - v.x)*(x - v.x) + (y - v.y)*(y - v.y) + (z - v.z)*(z - v.z));
 }
 
 //constants
@@ -91,15 +82,16 @@ Vector3D operator-(const Vector3D& lv, const Vector3D& rv)
                     lv.get_y()-rv.get_y(),
                     lv.get_z()-rv.get_z());
 }
-
-double operator*(const Vector3D& lv, const Vector3D& rv){
-	return (lv.get_x()*rv.get_x() + lv.get_y()*rv.get_y() + lv.get_z()*rv.get_z());
+Vector3D operator*(const double &d, const Vector3D &v)
+{
+    return Vector3D(d*v.get_x(), d*v.get_y(), d*v.get_z());
 }
-
-Vector3D operator^(const Vector3D& v, double r){
-	return Vector3D(v.get_x()*r, v.get_y()*r, v.get_z()*r);
+double operator*( const Vector3D &v1, const Vector3D &v2)
+{
+    return(v1.get_x()*v2.get_x()+
+           v1.get_y()*v2.get_y()+
+           v1.get_z()*v2.get_z());
 }
-
 //overload operator == < to overload < for sphere
 bool operator==(const Vector3D& lv, const Vector3D& rv)
 {
@@ -107,8 +99,6 @@ bool operator==(const Vector3D& lv, const Vector3D& rv)
             lv.get_y() == rv.get_y() &&
             lv.get_z() == rv.get_z());
 }
-
-
 bool operator<(const Vector3D& lv, const Vector3D& rv)
 {
     if(lv.get_x()==rv.get_x())
@@ -120,4 +110,8 @@ bool operator<(const Vector3D& lv, const Vector3D& rv)
     else return lv.get_x()<rv.get_x();
 }
 
-
+//overload operator << for ostream
+std::ostream& operator<<(std::ostream &out, const Vector3D &v)
+{
+    return out << "(" << v.get_x() << ", " << v.get_y() << ", " << v.get_z() << ")";
+}

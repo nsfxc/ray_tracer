@@ -1,6 +1,7 @@
 #ifndef SPHERE_H
 #define SPHERE_H
 
+#include <iostream>
 #include "Vector3D.h"
 #include "Color.h"
 
@@ -26,4 +27,6 @@ class Sphere
 bool operator<(const Sphere &ls, const Sphere &rs);
 //bool operator==(const Sphere &ls, const Sphere &rs);
 
+//overload operator << for ostream
+std::ostream& operator<<(std::ostream &out, const Sphere &s);
 #endif // SPHERE_H

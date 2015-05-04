@@ -2,9 +2,7 @@
 #include "Sphere.h"
 
 //constructor
-Scene::Scene(){
-
-}
+Scene::Scene(){}
 
 //operations
 bool Scene::add(const Sphere &s)

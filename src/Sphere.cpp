@@ -1,3 +1,5 @@
+#include <iomanip>
+#include <iostream>
 #include "Sphere.h"
 #include "Color.h"
 #include "Vector3D.h"
@@ -41,10 +43,15 @@ bool operator<(const Sphere &ls, const Sphere &rs)
         else return ls.radius()<rs.radius();
     else return ls.origin()<rs.origin();
 }
-bool operator==(const Sphere &ls, const Sphere &rs)
-{
-    return (ls.origin()==rs.origin()
-            && ls.radius()==rs.radius()
-          && ls.color()==rs.color());
-}
+//bool operator==(const Sphere &ls, const Sphere &rs)
+//{
+//    return (ls.origin()==rs.origin()
+//            && ls.radius()==rs.radius()
+//            && ls.color()==rs.color());
+//}
 
+//overload operator << for ostream
+std::ostream& operator<<(std::ostream &out, const Sphere &s)
+{
+    return out << s.origin() << " [r = " << s.radius() << "] " << std::hex << s.color() << std::dec;
+}

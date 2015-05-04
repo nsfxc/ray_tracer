@@ -1,6 +1,7 @@
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
+#include <iostream>
 
 class Vector3D
 {
@@ -14,10 +15,10 @@ public:
     double get_y() const;
     double get_z() const;
 
-    //set coordinate x y z
-    void set_x(double x);
-    void set_y(double y);
-    void set_z(double z);
+//    //set coordinate x y z
+//    void set_x(double x);
+//    void set_y(double y);
+//    void set_z(double z);
     void set(double x,double y,double z);
 
     //copy the coordinates of a vector
@@ -25,9 +26,6 @@ public:
 
     //linear multiplication overload *= : vector*=number
     void operator*=(double l);
-
-    double distance(Vector3D v);
-    double length();
 
     //constants
 static const Vector3D ZERO;
@@ -40,22 +38,17 @@ private:
     double x,y,z;
 };
 
-//overload operator + -
+//overload operator + - *
 Vector3D operator+(const Vector3D& lv, const Vector3D& rv);
 Vector3D operator-(const Vector3D& lv, const Vector3D& rv);
-double operator*(const Vector3D& lv, const Vector3D& rv);
-Vector3D operator^(const Vector3D& lv, double k);
-
+Vector3D operator*(const double &d, const Vector3D &v);     //Scalar multiplication
+double operator*( const Vector3D &v1, const Vector3D &v2);  //Scalar product
 //overload operator == < to overload < for sphere
 bool operator==(const Vector3D& lv, const Vector3D& rv);
 bool operator<(const Vector3D& lv, const Vector3D& rv);
 
-//constants
-static const Vector3D V3_ZERO = Vector3D(0, 0, 0);
-static const Vector3D V3_ONE = Vector3D(1, 1, 1);
-static const Vector3D V3_EX = Vector3D(1, 0, 0);
-static const Vector3D V3_EY = Vector3D(0, 1, 0);
-static const Vector3D V3_EZ = Vector3D(0, 0, 1);
+//overload operator << for ostream
+std::ostream& operator<<(std::ostream &out, const Vector3D &v);
 
 
 #endif // VECTOR3D_H
