@@ -10,7 +10,7 @@ class Scene
     public:
         //constructor
         Scene();
-
+        std::set<Sphere> getSpheres() const;
         //operations
         bool add(const Sphere &s);
         bool remove(const Sphere &s);

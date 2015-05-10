@@ -1,6 +1,6 @@
 #include "Scene.h"
 #include "Sphere.h"
-
+#include<set>
 //constructor
 Scene::Scene(){}
 
@@ -12,4 +12,8 @@ bool Scene::add(const Sphere &s)
 bool Scene::remove(const Sphere &s)
 {
     return sc.erase(s);
+}
+
+std::set<Sphere> Scene::getSpheres() const{
+	return sc;
 }
