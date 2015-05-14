@@ -1,0 +1,113 @@
+# depslib dependency file v1.0
+1430692905 source:e:\c_c++_files\ray-tracer\vector3d.cpp
+	<cmath>
+	"Vector3D.h"
+
+1430692794 e:\c_c++_files\ray-tracer\vector3d.h
+	<iostream>
+
+1430667126 source:e:\c_c++_files\ray-tracer\ray.cpp
+	<iostream>
+	"Ray.h"
+	"Vector3D.h"
+
+1430667126 e:\c_c++_files\ray-tracer\ray.h
+	<iostream>
+	"Vector3D.h"
+
+1430770932 source:e:\c_c++_files\ray-tracer\test.cpp
+	<utility>
+	<iostream>
+	<iomanip>
+	<cassert>
+	"EasyBMP.h"
+	"Light.h"
+	"ray_tracer.h"
+	"Ray.h"
+	"Sphere.h"
+	"Scene.h"
+	"Vector3D.h"
+
+1430761186 source:e:\c_c++_files\ray-tracer\color.cpp
+	"Color.h"
+
+1430769374 e:\c_c++_files\ray-tracer\color.h
+
+1430667387 source:e:\c_c++_files\ray-tracer\sphere.cpp
+	<iomanip>
+	<iostream>
+	"Sphere.h"
+	"Color.h"
+	"Vector3D.h"
+
+1430694609 e:\c_c++_files\ray-tracer\sphere.h
+	<iostream>
+	"Vector3D.h"
+	"Color.h"
+
+1430697675 source:e:\c_c++_files\ray-tracer\light.cpp
+	"Light.h"
+
+1430697675 e:\c_c++_files\ray-tracer\light.h
+	"Vector3D.h"
+	"Color.h"
+
+1430767488 source:e:\c_c++_files\ray-tracer\camera.cpp
+	<cstddef>
+	"Camera.h"
+	"Vector3D.h"
+
+1430764301 e:\c_c++_files\ray-tracer\camera.h
+	<cstddef>
+	"Vector3D.h"
+
+1430611597 source:e:\c_c++_files\ray-tracer\scene.cpp
+	"Scene.h"
+	"Sphere.h"
+
+1430611597 e:\c_c++_files\ray-tracer\scene.h
+	<set>
+	"Sphere.h"
+
+1430771287 source:e:\c_c++_files\ray-tracer\ray_tracer.cpp
+	<cmath>
+	<utility>
+	"Camera.h"
+	"Color.h"
+	"EasyBMP.h"
+	"Light.h"
+	"Ray.h"
+	"ray_tracer.h"
+	"Sphere.h"
+	"Vector3D.h"
+
+1430768023 e:\c_c++_files\ray-tracer\ray_tracer.h
+	<utility>
+	"Camera.h"
+	"Color.h"
+	"EasyBMP.h"
+	"Light.h"
+	"Ray.h"
+	"Sphere.h"
+	"Vector3D.h"
+
+1164936168 source:e:\c_c++_files\ray-tracer\easybmp.cpp
+	"EasyBMP.h"
+
+1164935136 e:\c_c++_files\ray-tracer\easybmp.h
+	<iostream>
+	<cmath>
+	<cctype>
+	<cstring>
+	<stdio.h>
+	<cstdio>
+	"EasyBMP_DataStructures.h"
+	"EasyBMP_BMP.h"
+	"EasyBMP_VariousBMPutilities.h"
+
+1164934954 e:\c_c++_files\ray-tracer\easybmp_datastructures.h
+
+1164936032 e:\c_c++_files\ray-tracer\easybmp_bmp.h
+
+1164934962 e:\c_c++_files\ray-tracer\easybmp_variousbmputilities.h
+

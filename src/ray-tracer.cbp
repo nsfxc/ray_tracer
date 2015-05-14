@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ray-tracer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ray-tracer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Camera.cpp" />
+		<Unit filename="Camera.h" />
+		<Unit filename="Color.cpp" />
+		<Unit filename="Color.h" />
+		<Unit filename="EasyBMP.cpp" />
+		<Unit filename="EasyBMP.h" />
+		<Unit filename="EasyBMP_BMP.h" />
+		<Unit filename="EasyBMP_DataStructures.h" />
+		<Unit filename="EasyBMP_VariousBMPutilities.h" />
+		<Unit filename="Light.cpp" />
+		<Unit filename="Light.h" />
+		<Unit filename="Ray.cpp" />
+		<Unit filename="Ray.h" />
+		<Unit filename="Scene.cpp" />
+		<Unit filename="Scene.h" />
+		<Unit filename="Sphere.cpp" />
+		<Unit filename="Sphere.h" />
+		<Unit filename="Vector3D.cpp" />
+		<Unit filename="Vector3D.h" />
+		<Unit filename="ray_tracer.cpp" />
+		<Unit filename="ray_tracer.h" />
+		<Unit filename="test.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
